@@ -3,7 +3,7 @@
 # import the Flask class from the flask module
 from flask import Flask
 
-#create the application
+# create the application object
 app = Flask(__name__)
 
 # use decorators to link the function to a url
