@@ -1,4 +1,5 @@
 import sys
+import pdb
 from random import choice 
 
 random1 = [1,2,3,4,5,6,7,8,9,10,11,12]
@@ -6,6 +7,8 @@ random2 = [1,2,3,4,5,6,7,8,9,10,11,12]
 
 while True: 
     print "To exit this game type 'exit'" 
+    num1 = choice(random2)
+    num2 = choice(random1)
     answer = raw_input("What is {} times {}? ".format(choice(random2), choice(random1))) 
 
     # exit
@@ -14,7 +17,8 @@ while True:
         sys.exit() 
 
     # determine if number is correct
-    elif answer == choice(random2) * choice(random1):
+    elif answer == (num1 * num2): 
         print "Correct!"
+        break
     else:
        print "Wrong!"
